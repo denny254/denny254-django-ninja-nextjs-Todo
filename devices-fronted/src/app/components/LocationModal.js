@@ -35,7 +35,7 @@ export default function LocationModal(props) {
     };
 
     if (!device || !locations) {
-        return null; // Return nothing if data is missing
+        return null;
     }
 
     return (

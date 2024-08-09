@@ -2,7 +2,7 @@ import LocationModal from "@/app/components/LocationModal";
 
 async function getDevice(slug) {
     const endpoint = `http://127.0.0.1:8000/api/devices/${slug}`;
-    const res = await fetch(endpoint, { cache: 'no-store' });
+    const res = await fetch(endpoint, {cache: 'no-store'});
 
     if (!res.ok) {
         throw new Error('Failed to fetch data');

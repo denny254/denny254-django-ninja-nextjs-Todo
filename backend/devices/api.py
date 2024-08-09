@@ -23,7 +23,7 @@ def get_devices(request):
     return Location.objects.all()
 
 
-@app.post("devices/", response={200: DeviceSchema, 404: Error})
+@app.post("devices", response={200: DeviceSchema, 404: Error})
 def create_device(request, device: DeviceCreateSchema):
     if device.location_id:
         # We have a location ID in the body
